@@ -36,6 +36,26 @@ const floatUp = keyframes`
 	}
 `;
 
+const slideInUp = keyframes`
+	0% {
+        transform: translate(0,100%);
+	}
+	100% {
+        transform: translate(0,0);
+	}
+`;
+
+const slideInUpSmallDesktop = keyframes`
+	0% {
+		transform: scale(0.7) translate(0,100%) translate3d(15%,20%,0);
+
+	}
+	100% {
+		transform: scale(0.7) translate(0,0) translate3d(15%,20%,0);
+
+	}
+`;
+
 //STYLES
 
 export const DesktopArtworkContainer = Styled.div`
@@ -45,9 +65,14 @@ export const DesktopArtworkContainer = Styled.div`
     right: -13rem;
     display: flex;
     flex-direction: row;
+	transform: scale(1) translate(0,100%);
+	animation: ${slideInUp} 1.5s ease-in-out forwards;
+	animation-delay: 1.5s;
 
     @media(max-width: 1366px){
-        transform: scale(0.7) translate3d(15%,20%,0);
+		animation: ${slideInUpSmallDesktop} 1.5s ease-in-out forwards;
+		animation-delay: 1.5s;
+
     }
 `;
 

@@ -15,7 +15,7 @@ const App = () => {
       <ResetCSS/>
       <NavMenu User={User}/>
       <Switch>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" render={(props)=><Home User={User}/>}/>
           {/* <Route path="/portfolio" component={portfolio}/> */}
       </Switch>
     </BrowserRouter>

@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled, { keyframes } from "styled-components";
 import { ReactComponent as Blob } from "./blob.svg";
 
 // CODE FOR A SMALL BUBBLE THAT WILL NEED TO BE ANIMATED 
@@ -33,15 +33,28 @@ import { ReactComponent as Blob } from "./blob.svg";
 //     animation-duration: 5s;
 // `;
 
-export const Background = Styled.div`
-    height: 100vh !important;
-    width: 100vw !important;
-    background-color: white;
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
+const fadeInDown = keyframes`
+	0% {
+        transform: translate(-50%,-100%);
+        opacity: 0;
+	}
+	100% {
+        transform: translate(-50%,0);
+        opacity: 1;
+	}
 `;
+
+const fadeInLeft = keyframes`
+	0% {
+        transform: translate(120%,0);
+        /* opacity: 0; */
+	}
+	100% {
+        transform: translate(-0,0);
+        /* opacity: 1; */
+	}
+`;
+
 
 export const Circle = Styled.span`
     height: 200vh;
@@ -51,12 +64,23 @@ export const Circle = Styled.span`
     display: inline-block;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-100%);
     top: -125vh;
     border: 10px solid #86A8E7;
+    opacity: 0;
     z-index: 1;
+    animation: ${fadeInDown} 2.3s ease-in-out forwards;
 `;
 
+export const Background = Styled.div`
+    height: 100vh !important;
+    width: 100vw !important;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+`;
 
 export const ContentBox = Styled.div`
 
@@ -72,6 +96,10 @@ export const ContentBox = Styled.div`
     z-index: 3;
     filter: drop-shadow(0 0 1rem rgba(0,0,0,0.2));
     overflow: hidden;
+    transform: translate(120%,0);
+    animation: ${fadeInLeft} 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+
 `;
 
 export const SummaryDisplayBlob = Styled(Blob)`
