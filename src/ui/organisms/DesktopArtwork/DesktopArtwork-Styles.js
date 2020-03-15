@@ -72,7 +72,6 @@ export const DesktopArtworkContainer = Styled.div`
     @media(max-width: 1366px){
 		animation: ${slideInUpSmallDesktop} 1.5s ease-in-out forwards;
 		animation-delay: 1.5s;
-
     }
 `;
 
