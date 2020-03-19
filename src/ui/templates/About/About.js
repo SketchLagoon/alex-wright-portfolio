@@ -3,24 +3,25 @@ import React from 'react';
 import DesktopArtwork from "../../organisms/DesktopArtwork/DesktopArtwork"
 import Logo from "../../molecules/Logo/Logo"
 
-import { 
-        Background, 
-        Circle,
-        ContentBox,
-        SummaryDisplayBlob
-        } from "./SummaryDisplay-Styles"
+import { ContentBox } from "../Template-Styles"
 
-const SummaryDisplay = ({name, roles}) =>{
+import { 
+        SummaryDisplayBlob,
+        BioSummary,
+        BioName
+        } from "./About-Styles"
+
+const About = ({name, roles, bio}) =>{
   return (
-    <Background>
-        <Circle/>
+      <>
         <ContentBox>
           <Logo name={name} roles={roles}/>
+          <BioSummary>I'm <BioName>{name}</BioName>, {bio}</BioSummary>
           <SummaryDisplayBlob/>
         </ContentBox>
         <DesktopArtwork/>
-    </Background>
+      </>
   );
 }
 
-export default SummaryDisplay;
+export default About;

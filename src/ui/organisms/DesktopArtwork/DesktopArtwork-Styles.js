@@ -7,6 +7,7 @@ import Styled, { keyframes } from "styled-components";
 // import { ReactComponent as Asset5 } from "./SVGAssets/Asset1.svg";
 // import { ReactComponent as Asset6 } from "./SVGAssets/Asset1.svg";
 // import { ReactComponent as Asset7 } from "./SVGAssets/Asset1.svg";
+
 //Example for importing SVGs instead of PNGs
 // export const ArtAsset1 = Styled(Asset1)`
 // `;

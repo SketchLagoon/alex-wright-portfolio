@@ -27,7 +27,7 @@ export const NavMenuRoleContainer = Styled.div`
 
 export const NavMenuRoleText = Styled.h1`
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: 600;
     color: #1a1b1e99;
 `
 

@@ -3,7 +3,7 @@ import Asset1 from "./PNGAssets/Asset1.png";
 import Asset2 from "./PNGAssets/Asset2.png";
 import Asset3 from "./PNGAssets/Asset3.png";
 import Asset4 from "./PNGAssets/Asset4.png";
-import Asset5 from "./PNGAssets/Asset5.png";
+import Asset5 from "./PNGAssets/Asset5-modified.png";
 import Asset6 from "./PNGAssets/Asset6.png";
 import Asset7 from "./PNGAssets/Asset7.png";
 

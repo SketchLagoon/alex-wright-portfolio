@@ -1,10 +1,15 @@
 import React from 'react';
 
-import SummaryDisplay from "../../templates/SummaryDisplay/SummaryDisplay"
+import About from "../../templates/About/About"
+
+import { Background, Circle } from "./Home-Styles"
 
 const Home = ({User}) =>{
   return (
-    <SummaryDisplay name={User.name} roles={User.roles}/>
+    <Background>
+      <Circle/>
+      <About name={User.name} roles={User.roles} bio={User.bio}/>
+    </Background>
   );
 }
 
