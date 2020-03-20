@@ -12,7 +12,7 @@ import {
   NavMenuDeadSpace
 } from "./NavMenu-Styles";
 
-const NavMenu = ({ User }) => {
+const NavMenu = ({ User, handleCarouselItemChange }) => {
   const [open, setOpen] = useState(false);
   //CHANGE THIS BACK AFTER YOU ARE DONE EDITING THE MENU
   // const [open, setOpen] = useState(true);
@@ -38,7 +38,7 @@ const NavMenu = ({ User }) => {
         >
           <NavMenuContainer>
             <NavMenuAvatar roles={User.roles}/>
-            <NavMenuNavigation navLinks={User.navLinks} icons={User.icons} />
+            <NavMenuNavigation navLinks={User.navLinks} icons={User.icons} handleCarouselItemChange={handleCarouselItemChange} toggleOpen={toggleOpen}/>
             <NavMenuFooter links={User.links}/>
           </NavMenuContainer>
           <NavMenuDeadSpace open={false} />
@@ -47,7 +47,7 @@ const NavMenu = ({ User }) => {
         <NavMenuWrapper style={{ transform: "translate3d(0,0,0)" }}>
           <NavMenuContainer>
             <NavMenuAvatar roles={User.roles}/>
-            <NavMenuNavigation navLinks={User.navLinks} icons={User.icons} />
+            <NavMenuNavigation navLinks={User.navLinks} icons={User.icons}  handleCarouselItemChange={handleCarouselItemChange} toggleOpen={toggleOpen}/>
             <NavMenuFooter links={User.links}/>
           </NavMenuContainer>
           <NavMenuDeadSpace onClick={closeClickCatch} open={true} />

@@ -9,9 +9,9 @@ import Asset7 from "./PNGAssets/Asset7.png";
 
 import { DesktopArtworkContainer, ArtAsset } from "./DesktopArtwork-Styles";
 
-const DesktopArtwork = () => {
+const DesktopArtwork = ({active}) => {
   return (
-    <DesktopArtworkContainer>
+    <DesktopArtworkContainer active={active}>
       <ArtAsset
         src={Asset1}
         direction={"up"}

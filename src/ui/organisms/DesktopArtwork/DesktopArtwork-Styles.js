@@ -1,4 +1,4 @@
-import Styled, { keyframes } from "styled-components";
+import Styled, { keyframes, css } from "styled-components";
 
 // import { ReactComponent as Asset1 } from "./SVGAssets/Asset1.svg";
 // import { ReactComponent as Asset2 } from "./SVGAssets/Asset1.svg";
@@ -39,10 +39,19 @@ const floatUp = keyframes`
 
 const slideInUp = keyframes`
 	0% {
-        transform: translate(0,100%);
+        transform:  scale(1) translate(0,100%);
 	}
 	100% {
-        transform: translate(0,0);
+        transform:  scale(1) translate(0,0);
+	}
+`;
+
+const slideOutDown = keyframes`
+	0% {
+		transform:  scale(1) translate(0,0);
+	}
+	100% {
+		transform:  scale(1) translate(0,100%);
 	}
 `;
 
@@ -57,6 +66,35 @@ const slideInUpSmallDesktop = keyframes`
 	}
 `;
 
+const slideOutDownSmallDesktop = keyframes`
+	0% {
+		transform: scale(0.7) translate(0,0) translate3d(15%,20%,0);
+
+	}
+	100% {
+		transform: scale(0.7) translate(0,100%) translate3d(15%,20%,0);
+
+	}
+`;
+
+//DOUBLE INTERPOLATED ANIMATIONS
+
+const SlideInUpAnim = css`
+	animation: ${slideInUp} 1.5s ease-in-out forwards;
+	animation-delay: 1.5s;
+	@media(max-width: 1366px){
+		animation: ${slideInUpSmallDesktop} 1.5s ease-in-out forwards;
+		animation-delay: 1.5s;
+	}
+`
+
+const SlideOutDownAnim = css`
+	animation: ${slideOutDown} 1.5s ease-in-out forwards;
+	@media(max-width: 1366px){
+		animation: ${slideOutDownSmallDesktop} 1.5s ease-in-out forwards;
+	}
+`
+
 //STYLES
 
 export const DesktopArtworkContainer = Styled.div`
@@ -66,14 +104,9 @@ export const DesktopArtworkContainer = Styled.div`
     right: -13rem;
     display: flex;
     flex-direction: row;
-	transform: scale(1) translate(0,100%);
-	animation: ${slideInUp} 1.5s ease-in-out forwards;
-	animation-delay: 1.5s;
-
-    @media(max-width: 1366px){
-		animation: ${slideInUpSmallDesktop} 1.5s ease-in-out forwards;
-		animation-delay: 1.5s;
-    }
+	transform: translate(0,100%);
+	
+	${props => (props.active === "yes" ? SlideInUpAnim : SlideOutDownAnim)}
 `;
 
 export const ArtAsset = Styled.img`

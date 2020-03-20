@@ -11,15 +11,15 @@ import {
         BioName
         } from "./About-Styles"
 
-const About = ({name, roles, bio}) =>{
+const About = ({name, roles, bio, active}) =>{
   return (
       <>
-        <ContentBox>
+        <ContentBox active={active}>
           <Logo name={name} roles={roles}/>
           <BioSummary>I'm <BioName>{name}</BioName>, {bio}</BioSummary>
           <SummaryDisplayBlob/>
         </ContentBox>
-        <DesktopArtwork/>
+        <DesktopArtwork active={active}/>
       </>
   );
 }
