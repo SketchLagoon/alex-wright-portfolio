@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ResetCSS from "./ResetCSS"
 
 import NavMenu from "./ui/organisms/NavMenu/NavMenu"
+import MobileNavMenu from "./ui/organisms/MobileNavMenu/MobileNavMenu"
 
 import Home from "./ui/pages/Home/Home"
 
@@ -19,7 +20,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <ResetCSS/>
-      <NavMenu User={User} handleCarouselItemChange={handleCarouselItemChange}/>
+
+      {
+        window.innerWidth < 700 ? 
+        <MobileNavMenu User={User} handleCarouselItemChange={handleCarouselItemChange}/> : 
+        <NavMenu User={User} handleCarouselItemChange={handleCarouselItemChange}/>
+      }
+      
       <Switch>
           <Route exact path="/" render={(props)=><Home User={User} activeCarouselItem={activeCarouselItem}/>}/>
       </Switch>

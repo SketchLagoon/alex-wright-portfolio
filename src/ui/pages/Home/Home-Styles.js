@@ -25,11 +25,17 @@ export const Circle = Styled.span`
     opacity: 0;
     z-index: 1;
     animation: ${fadeInDown} 2.3s ease-in-out forwards;
+
+    @media(max-width: 700px){
+        height: 150vh;
+        width: 200vh;
+        top: -100vh;
+    }
 `;
 
 export const Background = Styled.div`
-    height: 100vh !important;
-    width: 100vw !important;
+    height: 100% !important;
+    width: 100% !important;
     background-color: white;
     overflow: hidden;
     position: relative;

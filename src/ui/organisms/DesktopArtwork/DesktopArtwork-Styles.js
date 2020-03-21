@@ -12,7 +12,13 @@ import Styled, { keyframes, css } from "styled-components";
 // export const ArtAsset1 = Styled(Asset1)`
 // `;
 
-//KEYFRAMES
+//KEYFRAMES 
+
+//4k
+
+//1440p
+
+//1080p
 const floatDown = keyframes`
 	0% {
 		transform: translatey(0px);
@@ -55,25 +61,43 @@ const slideOutDown = keyframes`
 	}
 `;
 
+//720p
+
 const slideInUpSmallDesktop = keyframes`
 	0% {
 		transform: scale(0.7) translate(0,100%) translate3d(15%,20%,0);
-
 	}
 	100% {
 		transform: scale(0.7) translate(0,0) translate3d(15%,20%,0);
-
 	}
 `;
 
 const slideOutDownSmallDesktop = keyframes`
 	0% {
 		transform: scale(0.7) translate(0,0) translate3d(15%,20%,0);
-
 	}
 	100% {
 		transform: scale(0.7) translate(0,100%) translate3d(15%,20%,0);
+	}
+`;
 
+//MOBILE
+
+const slideInUpSmallMobile = keyframes`
+	0% {
+		transform: scale(0.5) translate(0,100%) translate3d(38%,40%,0);
+	}
+	100% {
+		transform: scale(0.5) translate(0,0) translate3d(38%,40%,0);
+	}
+`;
+
+const slideOutDownSmallMobile = keyframes`
+	0% {
+		transform: scale(0.5) translate(0,0) translate3d(38%,40%,0);
+	}
+	100% {
+		transform: scale(0.5) translate(0,100%) translate3d(38%,40%,0);
 	}
 `;
 
@@ -86,12 +110,19 @@ const SlideInUpAnim = css`
 		animation: ${slideInUpSmallDesktop} 1.5s ease-in-out forwards;
 		animation-delay: 1.5s;
 	}
+	@media(max-width: 700px){
+		animation: ${slideInUpSmallMobile} 1.5s ease-in-out forwards;
+		animation-delay: 1.5s;
+	}
 `
 
 const SlideOutDownAnim = css`
 	animation: ${slideOutDown} 1.5s ease-in-out forwards;
 	@media(max-width: 1366px){
 		animation: ${slideOutDownSmallDesktop} 1.5s ease-in-out forwards;
+	}
+	@media(max-width: 700px){
+		animation: ${slideOutDownSmallMobile} 1.5s ease-in-out forwards;
 	}
 `
 

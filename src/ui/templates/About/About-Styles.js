@@ -109,6 +109,11 @@ export const SummaryDisplayBlob = Styled(Blob)`
         height: 35rem;
         right: -4rem;
     }
+
+    @media(max-width: 700px){
+        right: -0.4rem;
+        bottom: -14rem;
+    }
 `;
 
 export const BioSummary = Styled.p`
@@ -121,6 +126,26 @@ export const BioSummary = Styled.p`
     @media(max-width: 1366px){
         font-size: 1.75rem;
     }
+    @media(max-width: 700px){
+        padding: 2rem 2rem;
+        width: calc(100% - 4rem);
+        font-size: 1rem;
+        /* padding-left: 0; */
+        text-align: center;
+        line-height: 1.3rem;
+    }
+
+    @media(max-width: 376px){
+        padding: 4rem 2rem;
+        width: calc(100% - 4rem);
+        font-size: 1rem;
+        /* padding-left: 0; */
+        text-align: center;
+        line-height: 1.3rem;
+    }
+    @media(max-width: 376px) and (max-height: 800px){
+        padding: 2rem 2rem;
+    }
 `
 export const BioName = Styled.span`
     display: inline;
@@ -130,5 +155,9 @@ export const BioName = Styled.span`
 
     @media(max-width: 1366px){
         font-size: 2.25rem;
+    }
+    @media(max-width: 700px){
+        font-size: 1.33rem;
+
     }
 `

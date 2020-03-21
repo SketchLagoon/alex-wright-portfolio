@@ -49,6 +49,13 @@ export const ContentBox = Styled.div`
     transform: translatex(10vw);
   
     ${props => (props.active === "yes" ? inAnimation : outAnimation)}
+
+    @media(max-width: 700px) {
+      height: 85vh;
+      width: 90vw;
+      top: 2.5vh;
+      left: -5vw;
+    }
 `;
 
 export const ComingSoonWrapper = Styled.div`

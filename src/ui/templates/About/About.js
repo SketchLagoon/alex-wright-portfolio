@@ -17,9 +17,22 @@ const About = ({name, roles, bio, active}) =>{
         <ContentBox active={active}>
           <Logo name={name} roles={roles}/>
           <BioSummary>I'm <BioName>{name}</BioName>, {bio}</BioSummary>
+
+          {
+            window.innerWidth < 700 ? 
+            <DesktopArtwork active={active}/> :
+            <></>
+          }
+
           <SummaryDisplayBlob/>
         </ContentBox>
-        <DesktopArtwork active={active}/>
+
+        {
+          window.innerWidth < 700 ? 
+          <></> : 
+          <DesktopArtwork active={active}/>
+        }
+
       </>
   );
 }
