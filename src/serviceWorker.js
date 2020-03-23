@@ -52,6 +52,8 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
+  } else {
+    console.log("Can't Register to SW. Current env:", process.env.NODE_ENV);
   }
 }
 
