@@ -1,6 +1,5 @@
 import React from 'react';
 
-import MobileWhiteLogo from "../../atoms/MobileWhiteLogo/MobileWhiteLogo"
 import Carousel from "../../organisms/Carousel/Carousel"
 
 import { Background, Circle } from "./Home-Styles"

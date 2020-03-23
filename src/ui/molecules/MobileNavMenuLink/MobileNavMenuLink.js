@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {  } from "./MobileNavMenuLink-Styles"
+import { NavItemContainer, NavItemText } from "./MobileNavMenuLink-Styles"
 
-const MobileNavMenuLink = ({activeNavItem, label, icon, handleCarouselItemChange, toggleOpen}) => {
+const MobileNavMenuLink = ({activeNavItem, label, icon, handleCarouselItemChange}) => {
   return (
-    <NavItemContainer onClick={()=>{handleCarouselItemChange(activeNavItem);toggleOpen();}}>
+    <NavItemContainer onClick={()=>{handleCarouselItemChange(activeNavItem)}}>
       {icon()}
       <NavItemText>
         {label.toUpperCase()}
