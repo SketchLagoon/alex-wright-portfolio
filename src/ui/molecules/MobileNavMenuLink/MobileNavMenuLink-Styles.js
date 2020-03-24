@@ -22,7 +22,7 @@ export const NavItemContainer = Styled.div`
     width: 25%;
     opacity: 0.6;
     transition: 0.5s;
-    transform: translatey(0);
+    transform: translatey(10rem);
     animation: ${FadeInUp} 2s ease-in-out forwards;
     animation-delay: ${props=>(props.animDelay? props.animDelay + "s"  : 0)};
 
