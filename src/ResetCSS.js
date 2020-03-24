@@ -36,9 +36,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-	height: 100vh;
-	width: 100vw;
-	overflow: hidden;
+	height: 100vh !important;
+	width: 100vw !important;
+	overflow: hidden !important;
 }
 ol, ul {
 	list-style: none;

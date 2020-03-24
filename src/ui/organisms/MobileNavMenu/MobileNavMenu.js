@@ -13,7 +13,7 @@ const MobileNavMenu = ({ User, toggleOpen, handleCarouselItemChange }) => {
 
   return (
     <MobileNavMenuWrapper>
-      {navLinks && navLinks.map( (link, i) => <MobileNavMenuLink key={i} activeNavItem={i} icon={icons[i]} label={link} handleCarouselItemChange={handleCarouselItemChange} toggleOpen={toggleOpen}/> )}
+      {navLinks && navLinks.map( (link, i) => <MobileNavMenuLink key={i} activeNavItem={i} icon={icons[i]} label={link} handleCarouselItemChange={handleCarouselItemChange} toggleOpen={toggleOpen} animDelay={Math.round(i)/10}/> )}
     </MobileNavMenuWrapper>
   );
 };

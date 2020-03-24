@@ -122,10 +122,13 @@ export const BioSummary = Styled.p`
     color: #1a1b1e80;
     font-weight: 400; 
     font-size: 2.33rem;
+    position: relative;
+    z-index: 99;
 
     @media(max-width: 1366px){
         font-size: 1.75rem;
     }
+    
     @media(max-width: 700px){
         padding: 2rem 2rem;
         width: calc(100% - 4rem);
@@ -134,15 +137,19 @@ export const BioSummary = Styled.p`
         text-align: center;
         line-height: 1.3rem;
     }
+    @media(max-width: 700px) and (display-mode: fullscreen){
+        padding: 6rem 2rem;
+    }
 
     @media(max-width: 376px){
-        padding: 4rem 2rem;
+        padding: 2rem 2rem;
         width: calc(100% - 4rem);
         font-size: 1rem;
         /* padding-left: 0; */
         text-align: center;
         line-height: 1.3rem;
     }
+
     @media(max-width: 376px) and (max-height: 800px){
         padding: 2rem 2rem;
     }

@@ -56,6 +56,9 @@ export const ContentBox = Styled.div`
       top: 2.5vh;
       left: -5vw;
     }
+    @media(max-width: 700px) and (display-mode: browser) {
+      height: 72.5vh;
+    }
 `;
 
 export const ComingSoonWrapper = Styled.div`
