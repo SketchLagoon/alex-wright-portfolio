@@ -12,6 +12,9 @@ const FadeInUp = keyframes`
 `;
 
 export const NavItemContainer = Styled.div`
+    position: relative;
+    bottom: 0;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center;

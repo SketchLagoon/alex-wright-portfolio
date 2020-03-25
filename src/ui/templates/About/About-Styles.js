@@ -1,7 +1,7 @@
 import Styled, { keyframes } from "styled-components";
 import { ReactComponent as Blob } from "./blob.svg";
 
-// CODE FOR A SMALL BUBBLE THAT WILL NEED TO BE ANIMATED 
+// One small bubble, many will need to be dynamically generated and animated to fill the circlebg component
 // const float = keyframes`
 // 	0% {
 // 		transform: translatey(0px);
@@ -128,7 +128,7 @@ export const BioSummary = Styled.p`
     @media(max-width: 1366px){
         font-size: 1.75rem;
     }
-    
+
     @media(max-width: 700px){
         padding: 2rem 2rem;
         width: calc(100% - 4rem);
@@ -145,7 +145,6 @@ export const BioSummary = Styled.p`
         padding: 2rem 2rem;
         width: calc(100% - 4rem);
         font-size: 1rem;
-        /* padding-left: 0; */
         text-align: center;
         line-height: 1.3rem;
     }

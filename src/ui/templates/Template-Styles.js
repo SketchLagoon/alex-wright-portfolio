@@ -56,9 +56,19 @@ export const ContentBox = Styled.div`
       top: 2.5vh;
       left: -5vw;
     }
-    @media(max-width: 700px) and (display-mode: browser) {
+
+    @supports (-webkit-touch-callout: none) {
+      /* CSS specific to iOS devices */ 
+      @media(max-width: 700px) and (display-mode: browser) {
       height: 72.5vh;
+      }
     }
+
+    @supports not (-webkit-touch-callout: none) {
+      /* CSS for other than iOS devices */ 
+    }
+
+    
 `;
 
 export const ComingSoonWrapper = Styled.div`
@@ -67,10 +77,10 @@ export const ComingSoonWrapper = Styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const ComingSoon = Styled.h1`
   font-size: 4rem;
   color: #86A8E7;;
   font-weight: 600;
-`
+`;
