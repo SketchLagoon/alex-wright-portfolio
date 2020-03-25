@@ -24,12 +24,14 @@ const fadeOutLeft = keyframes`
 
 const inAnimation = css`
   animation: ${fadeInLeft} 2s ease-in-out forwards;
+  filter: drop-shadow(0 0 1rem rgba(0,0,0,0.2));
   /* research how to trigger on initial load only */
   /* animation-delay: 1.5s; */
 `;
 
 const outAnimation = css`
   animation: ${fadeOutLeft} 1s ease-in-out forwards;
+  filter: drop-shadow(0 0 1rem rgba(0,0,0,0.2));
 `;
 
 export const ContentBox = Styled.div`
