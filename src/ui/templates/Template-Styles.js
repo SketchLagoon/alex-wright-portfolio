@@ -59,6 +59,7 @@ export const ContentBox = Styled.div`
       left: -5vw;
     }
 
+
     @supports (-webkit-touch-callout: none) {
       /* CSS specific to iOS devices */ 
       @media(max-width: 700px) and (display-mode: browser) {
@@ -67,7 +68,11 @@ export const ContentBox = Styled.div`
     }
 
     @supports not (-webkit-touch-callout: none) {
-      /* CSS for other than iOS devices */ 
+      /* CSS for other than iOS devices  */
+      @media(max-width: 700px) and (display-mode: browser) {
+        height: 77.5vh;
+        top: 10vh;
+      }
     }
 
     

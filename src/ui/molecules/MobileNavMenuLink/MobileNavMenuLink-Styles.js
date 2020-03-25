@@ -18,7 +18,7 @@ export const NavItemContainer = Styled.div`
     align-items: center;
     overflow-y: hidden;
     color: #1a1b1e;
-    height: 10.5vh !important;
+    height: 100%;
     width: 25%;
     opacity: 0.6;
     transition: 0.5s;
