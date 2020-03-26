@@ -36,9 +36,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-	height: 100vh !important;
+	height: 100% !important;
 	width: 100vw !important;
 	overflow: hidden !important;
+	position: fixed;
 }
 ol, ul {
 	list-style: none;

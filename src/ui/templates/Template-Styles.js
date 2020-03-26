@@ -71,7 +71,7 @@ export const ContentBox = Styled.div`
       /* CSS for other than iOS devices  */
       @media(max-width: 700px) and (display-mode: browser) {
         height: 77.5vh;
-        top: 10vh;
+        /* top: 10vh; */
       }
     }
 

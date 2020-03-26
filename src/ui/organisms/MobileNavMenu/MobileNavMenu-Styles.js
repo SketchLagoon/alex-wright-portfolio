@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 
 export const MobileNavMenuWrapper = Styled.div`
-    position: fixed;
+    position: absolute;
     z-index: 999;
     width: 80vw;
     height: 10.5vh;

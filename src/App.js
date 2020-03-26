@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState} from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import ResetCSS from "./ResetCSS"
+import ResetCSS from "./ResetCSS";
 
-import NavMenu from "./ui/organisms/NavMenu/NavMenu"
-import MobileNavMenu from "./ui/organisms/MobileNavMenu/MobileNavMenu"
+import NavMenu from "./ui/organisms/NavMenu/NavMenu";
+import MobileNavMenu from "./ui/organisms/MobileNavMenu/MobileNavMenu";
+import Home from "./ui/pages/Home/Home";
 
-import Home from "./ui/pages/Home/Home"
 
-import User from "./DummyData/DummyData"
+import User from "./DummyData/DummyData";
 
 const App = () => {
   const [activeCarouselItem, setActiveCarouselItem] = useState(0);
@@ -19,19 +19,31 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <ResetCSS/>
+      <ResetCSS />
 
-      {
-        window.innerWidth < 700 ? 
-        <MobileNavMenu User={User} handleCarouselItemChange={handleCarouselItemChange}/> : 
-        <NavMenu User={User} handleCarouselItemChange={handleCarouselItemChange}/>
-      }
-      
+      {window.innerWidth < 700 ? (
+        <MobileNavMenu
+          User={User}
+          handleCarouselItemChange={handleCarouselItemChange}
+        />
+      ) : (
+        <NavMenu
+          User={User}
+          handleCarouselItemChange={handleCarouselItemChange}
+        />
+      )}
+
       <Switch>
-          <Route exact path="/" render={(props)=><Home User={User} activeCarouselItem={activeCarouselItem}/>}/>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Home User={User} activeCarouselItem={activeCarouselItem} />
+          )}
+        />
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

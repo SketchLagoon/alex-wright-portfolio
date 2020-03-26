@@ -9,6 +9,7 @@ import CaseStudies from "../../templates/CaseStudies/CaseStudies"
 import { CarouselWrapper } from "./Carousel-Styles"
 
 const Carousel = ({User, activeCarouselItem}) =>{
+
   return (
     <CarouselWrapper>
         <About name={User.name} roles={User.roles} bio={User.bio} active={activeCarouselItem === 0? "yes" : "no"}/>
